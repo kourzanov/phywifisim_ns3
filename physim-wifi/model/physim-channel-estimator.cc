@@ -381,7 +381,7 @@ PhySimChannelFrequencyOffsetEstimator::CorrectResidualCarrierFreqOffset (const i
 {
   NS_ASSERT ( input.size () == 53 );
   double estimator = CalculateResidualCarrierFreqOffset (input, symbolNo);
-  if (isnan (estimator))  // if estimator is not valid then return original input
+  if (std::isnan (estimator))  // if estimator is not valid then return original input
     {
       NS_LOG_WARN ("PhySimChannelFrequencyOffsetEstimator::CorrectResidualCarrierFreqOffset() - Estimator not valid");
       return input;
