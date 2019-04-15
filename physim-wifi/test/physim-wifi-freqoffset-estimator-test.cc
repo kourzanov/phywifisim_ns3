@@ -30,7 +30,7 @@
 #include "ns3/packet.h"
 #include "ns3/enum.h"
 #include "ns3/physim-wifi-helper.h"
-#include "ns3/random-variable.h"
+#include "ns3/random-variable-stream.h"
 #include "ns3/nqos-wifi-mac-helper.h"
 #include "ns3/mobility-helper.h"
 #include "ns3/packet-socket-helper.h"

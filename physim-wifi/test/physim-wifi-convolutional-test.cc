@@ -28,7 +28,7 @@
 #include "ns3/uinteger.h"
 #include "ns3/object-factory.h"
 #include "ns3/physim-helper.h"
-#include "ns3/random-variable.h"
+#include "ns3/random-variable-stream.h"
 #include "physim-wifi-convolutional-test.h"
 
 using namespace ns3;

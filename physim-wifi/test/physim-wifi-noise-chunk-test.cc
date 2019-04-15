@@ -21,7 +21,7 @@
 #include "ns3/physim-interference-helper.h"
 #include "ns3/ptr.h"
 #include "ns3/log.h"
-#include "ns3/random-variable.h"
+#include "ns3/random-variable-stream.h"
 #include "physim-wifi-noise-chunk-test.h"
 #include <itpp/itcomm.h>
 

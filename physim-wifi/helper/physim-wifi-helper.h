@@ -29,6 +29,7 @@
 #include "ns3/trace-helper.h"
 #include "ns3/physim-wifi-channel.h"
 #include "ns3/deprecated.h"
+#include "wifi-tx-vector.h"
 
 namespace ns3 {
 
