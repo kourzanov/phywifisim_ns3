@@ -19,12 +19,13 @@
  */
 
 #include "ns3/core-module.h"
-#include "ns3/common-module.h"
-#include "ns3/node-module.h"
-#include "ns3/helper-module.h"
 #include "ns3/physim-wifi-module.h"
 #include "ns3/mobility-module.h"
-#include "ns3/contrib-module.h"
+#include "ns3/packet-socket-helper.h"
+#include "ns3/packet-sink-helper.h"
+#include "ns3/on-off-helper.h"
+#include "ns3/packet-socket-address.h"
+#include "ns3/data-rate.h"
 
 NS_LOG_COMPONENT_DEFINE ("Main");
 
@@ -48,7 +49,7 @@ main (int argc, char *argv[])
   LogComponentEnable ("PhySimWifiIncreaseSNRTest", LOG_LEVEL_ALL);
   LogComponentEnable ("PhySimWifiVehicularChannelTest", LOG_LEVEL_ALL);
 
-  PhySimWifiTestSuite m_phySimWifiTestSuite;
-  m_phySimWifiTestSuite.Run ();
+  //PhySimWifiTestSuite m_phySimWifiTestSuite;
+  //m_phySimWifiTestSuite.Run ();
   return 0;
 }
