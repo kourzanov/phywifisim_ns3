@@ -25,6 +25,8 @@
 #include "ns3/log.h"
 #include "ns3/double.h"
 
+using namespace std;
+
 NS_LOG_COMPONENT_DEFINE ("PhySimChannelEstimator");
 
 namespace ns3 {

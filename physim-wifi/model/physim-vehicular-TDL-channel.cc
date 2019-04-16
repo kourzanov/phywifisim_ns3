@@ -24,10 +24,13 @@
 #include "ns3/log.h"
 #include "ns3/uinteger.h"
 #include "ns3/enum.h"
+#include <itpp/base/itassert.h>
 #include <itpp/base/math/misc.h>
 #include <itpp/stat/misc_stat.h>
 
 NS_LOG_COMPONENT_DEFINE ("Vehicular_TDL_Channel");
+
+using namespace std;
 
 namespace ns3 {
 IFFTFadingGenerator::IFFTFadingGenerator (double norm_doppler,
@@ -230,8 +233,7 @@ itpp::vec Vehicular_TDL_Channel::get_avg_power_dB () const
 void Vehicular_TDL_Channel::init ()
 {
 
-  it_assert (N_taps > 0,
-             "Vehicular_TDL_Channel::init(): Channel profile not defined yet");
+  it_assert (N_taps > 0, "Vehicular_TDL_Channel::init(): Channel profile not defined yet");
 
   if (fading_gen.size () > 0)
     {   // delete all old generators

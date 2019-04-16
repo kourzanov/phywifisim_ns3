@@ -8,10 +8,14 @@ def configure(conf):
                                  conf.env['ENABLE_ITPP'],
                                  "IT++ not found")
     if conf.env['ENABLE_ITPP']:
+	#conf.env.append_value('CXXFLAGS', '-std=c++0x')
+	conf.env.append_value('CXXFLAGS', '-fpermissive')
 	conf.env.append_value('CXXFLAGS', '-DNO_INT_SIZE_CHECK')
-        conf.env.append_value('CXXFLAGS','-Wno-error=deprecated-register')
         conf.env.append_value('CXXFLAGS','-Wno-error=reorder')
+        conf.env.append_value('CXXFLAGS','-Wno-error=narrowing')
+        conf.env.append_value('CXXFLAGS','-Wno-error=unused-variable')
         conf.env.append_value('CXXFLAGS','-Wno-error=overloaded-virtual')
+        conf.env.append_value('CXXFLAGS','-Wno-error')
 
 def build(bld):
     obj = bld.create_ns3_module('physim-wifi', ['network', 'propagation', 'wifi'])
